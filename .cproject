@@ -137,6 +137,12 @@
 								<option id="com.freescale.dsc.cdt.toolchain.linker.input.libs.357822890" name="Additional Libraries" superClass="com.freescale.dsc.cdt.toolchain.linker.input.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/M56800E Support/runtime_56800E/lib/Runtime 56800E lmm.lib&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/M56800E Support/msl/MSL_C/DSP_56800E/lib/MSL C 56800E LMM.lib&quot;"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="&quot;${workspace_loc:/kontroler_V4/FSLESL_LDM/AMCLIB/AMCLIB_LDM.lib}&quot;"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="&quot;${workspace_loc:/kontroler_V4/FSLESL_LDM/GDFLIB/GDFLIB_LDM.lib}&quot;"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="&quot;${workspace_loc:/kontroler_V4/FSLESL_LDM/GFLIB/GFLIB_LDM.lib}&quot;"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="&quot;${workspace_loc:/kontroler_V4/FSLESL_LDM/GMCLIB/GMCLIB_LDM.lib}&quot;"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="&quot;${workspace_loc:/kontroler_V4/FSLESL_LDM/MLIB/MLIB_LDM.lib}&quot;"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="&quot;${workspace_loc:/kontroler_V4/FSLESL_LDM/PCLIB/PCLIB_LDM.lib}&quot;"/>
 								</option>
 								<option id="com.freescale.dsc.cdt.toolchain.linker.general.dataModel.2143316349" name="Large Data Memory Model" superClass="com.freescale.dsc.cdt.toolchain.linker.general.dataModel" value="true" valueType="boolean"/>
 								<option id="com.freescale.dsc.cdt.toolchain.linker.output.generateSRecord.712042239" name="Generate S-Record File" superClass="com.freescale.dsc.cdt.toolchain.linker.output.generateSRecord" value="true" valueType="boolean"/>
@@ -175,7 +181,14 @@
 								<inputType id="com.freescale.dsc.cdt.toolchain.compiler.inputType.cpp.1563407197" name="DSC C++ Compiler Input" superClass="com.freescale.dsc.cdt.toolchain.compiler.inputType.cpp"/>
 							</tool>
 							<tool errorParsers="" id="com.freescale.dsc.cdt.toolchain.assembler.1179097387" name="DSC Assembler" superClass="com.freescale.dsc.cdt.toolchain.assembler">
-								<option id="com.freescale.dsc.cdt.toolchain.asm.input.include.2081830727" name="User Path (-i)" superClass="com.freescale.dsc.cdt.toolchain.asm.input.include"/>
+								<option id="com.freescale.dsc.cdt.toolchain.asm.input.include.2081830727" name="User Path (-i)" superClass="com.freescale.dsc.cdt.toolchain.asm.input.include" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/kontroler_V4/FSLESL_LDM/GFLIB/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/kontroler_V4/FSLESL_LDM/AMCLIB/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/kontroler_V4/FSLESL_LDM/GDFLIB/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/kontroler_V4/FSLESL_LDM/GMCLIB/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/kontroler_V4/FSLESL_LDM/MLIB/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/kontroler_V4/FSLESL_LDM/PCLIB/Include}&quot;"/>
+								</option>
 								<option id="com.freescale.dsc.cdt.toolchain.asm.general.generates56800EX.206556035" name="Generates elf file for 56800EX core" superClass="com.freescale.dsc.cdt.toolchain.asm.general.generates56800EX" value="true" valueType="boolean"/>
 								<option id="com.freescale.dsc.cdt.toolchain.asm.input.include.recursive.528823417" name="User Recursive Path (-ir )" superClass="com.freescale.dsc.cdt.toolchain.asm.input.include.recursive" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}&quot;"/>

@@ -67,7 +67,7 @@ Int16 InitVariables(Int8 i8Full)
 	m2UAlphaBeta.f16Beta = 0;
 	
 	mSinCosAngle.f16Sin = GFLIB_Sin_F16(FRAC16(0.0));
-	mSinCosAngle.f16Cos = GFLIB_Cos_F16(0);
+	mSinCosAngle.f16Cos = GFLIB_Cos_F16(FRAC16(0.0));
 	
 	
 	
