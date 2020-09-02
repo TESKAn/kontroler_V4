@@ -47,11 +47,37 @@
 
 #include "events.h"
 
+#pragma interrupt saveall
 void ADC_1_ISR(void)
 {
 	// Clear EOSI flag
 	ioctl(ADC_1, ADC_CLEAR_STATUS_EOSI, NULL);
 	
+	// Readout motor currents	
+	//ioctl(ADC_1, ADC_READ_SAMPLE, 8);
+	
+	// Transform to DQ frame
+	//GMCLIB_Park_F16(&SYSTEM.MCTRL.m2IAlphaBeta, &SYSTEM.POSITION.mSinCosAngle, &SYSTEM.MCTRL.m2IDQ);
+	
+	// Calculate regulation	
+	//GFLIB_CtrlPIDpAWInit_F16(FRAC16(0.0), &SVASANJE.sPIDReg);
+	
+	// Calculate new sin/cos
+	//SYSTEM.POSITION.mSinCosAngle.f16Sin = GFLIB_Sin_F16(SYSTEM.POSITION.f16RotorAngle);
+	//SYSTEM.POSITION.mSinCosAngle.f16Cos = GFLIB_Cos_F16(SYSTEM.POSITION.f16RotorAngle);
+	
+	// Transform to AB frame
+	//GMCLIB_ParkInv_F16(&SYSTEM.MCTRL.m2UDQ, &SYSTEM.POSITION.mSinCosAngle, &SYSTEM.MCTRL.m2UAlphaBeta);
+	
+	// Set PWMs
+	//ioctl(EFPWMA_SUB0, EFPWMS_WRITE_VALUE_REG_2, -1250 - SVASANJE.w16OutVal);
+	
 	// Call freemaster recorder
 	FMSTR_Recorder();
+}
+
+#pragma interrupt saveall
+void PIT0_ISR(void)
+{
+	ioctl(PIT_0, PIT_CLEAR_ROLLOVER_INT, NULL);
 }
