@@ -42,6 +42,7 @@
 #include "pdb.h"
 #include "freemaster.h"
 
+#include "functions.h"
 
 /* local prototypes */
 
@@ -100,10 +101,7 @@ void main (void)
 	ioctl(INTC, INTC_INIT, NULL);
 	archEnableInt();
 
-	/*
-	 * TODO: perform additional initialisations here 
-	 *
-	 */
+	InitVariables(1);
 
 	while(1)
 	{
