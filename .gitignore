@@ -1,4 +1,5 @@
 /Debug
 /FLASH_LDM
 /FLASH_SDM
-/ApplicationConfig/appconfig.bak
+ApplicationConfig/appconfig.bak
+ApplicationConfig/appconfig.lck
