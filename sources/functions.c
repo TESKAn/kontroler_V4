@@ -66,3 +66,8 @@ Int16 InitVariables(Int8 i8Full)
 	
 	return 0;
 }
+
+Int16 SystemStates()
+{
+	return 0;
+}
